@@ -21,6 +21,7 @@
 			min-height: 100vh;
 			display: block;
 			overflow: hidden;
+			padding: 0;
 		}
 
 		.hero-video,
@@ -312,45 +313,52 @@
 
 		@media (max-width: 768px) {
 			.alt-hero {
-				min-height: 420px;
-				height: calc(100dvh - 96px);
-				max-height: calc(100dvh - 96px);
+				--mobile-top-band: 62px;
+				--mobile-marquee-space: 28px;
+				min-height: 0;
+				height: clamp(320px, 52dvh, 430px);
+				max-height: clamp(320px, 52dvh, 430px);
 				background: #ffffff;
 			}
 
+			.top-brand,
+			.top-cta {
+				top: 0.42rem;
+				animation: none;
+			}
+
 			.hero-video {
-				top: 0;
+				top: var(--mobile-top-band);
 				left: 0;
 				right: 0;
-				bottom: 46px;
-				height: calc(100% - 46px);
+				bottom: var(--mobile-marquee-space);
+				height: calc(100% - var(--mobile-top-band) - var(--mobile-marquee-space));
 				object-fit: contain;
 				object-position: center top;
 				background: #ffffff;
 			}
 
 			.hero-fallback {
-				top: 0;
+				top: var(--mobile-top-band);
 				left: 0;
 				right: 0;
-				bottom: 46px;
-				height: calc(100% - 46px);
-				object-fit: contain;
+				bottom: var(--mobile-marquee-space);
+				height: calc(100% - var(--mobile-top-band) - var(--mobile-marquee-space));
+				object-fit: cover;
 				object-position: center top;
 				background: #ffffff;
-				transform: scale(1.05);
-				transform-origin: top center;
+				transform: none;
 			}
 
 			.alt-hero.is-show-fallback .hero-fallback {
-				transform: scale(1.05);
+				transform: none;
 			}
 
 			.sound-toggle {
 				right: 0.9rem;
 				left: auto;
 				top: auto;
-				bottom: 5.3rem;
+				bottom: calc(var(--mobile-marquee-space) + 0.35rem);
 				width: 58px;
 				height: 58px;
 				min-width: 58px;
@@ -361,6 +369,10 @@
 			}
 
 			.sound-toggle::before { border-left-color: #0f4c85; }
+
+			.hero-marquee {
+				padding: 0.24rem 0;
+			}
 		}
 
 		.mobile-services {
