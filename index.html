@@ -312,17 +312,29 @@
 
 		@media (max-width: 768px) {
 			.alt-hero {
-				min-height: 68vh;
+				min-height: 420px;
+				height: calc(100dvh - 96px);
+				max-height: calc(100dvh - 96px);
 				background: #ffffff;
 			}
 
 			.hero-video {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 58px;
+				height: calc(100% - 58px);
 				object-fit: contain;
 				background: #ffffff;
 			}
 
 			.hero-fallback {
-				object-fit: cover;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 58px;
+				height: calc(100% - 58px);
+				object-fit: contain;
 				object-position: center;
 				background: #ffffff;
 			}
@@ -331,7 +343,7 @@
 				right: 0.9rem;
 				left: auto;
 				top: auto;
-				bottom: 5rem;
+				bottom: 5.3rem;
 				width: 58px;
 				height: 58px;
 				min-width: 58px;
