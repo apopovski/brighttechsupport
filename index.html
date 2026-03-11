@@ -12,7 +12,7 @@
 
 		body {
 			font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-			background: #0a0f18;
+			background: #ffffff;
 			color: #ffffff;
 		}
 
@@ -127,20 +127,24 @@
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			gap: 0.62rem;
-			padding: 0.9rem 1.4rem;
-			min-width: 230px;
+			gap: 0.74rem;
+			padding: 1.05rem 1.75rem;
+			min-width: 272px;
 			border-radius: 999px;
-			border: 1px solid rgba(204, 231, 255, 0.34);
-			background: rgba(11, 21, 34, 0.42);
+			border: 1px solid rgba(210, 236, 255, 0.42);
+			background:
+				linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04) 45%, rgba(255, 255, 255, 0.08)),
+				rgba(9, 18, 31, 0.36);
 			color: #f3faff;
-			font-size: 1.02rem;
+			font-size: 1.12rem;
 			font-weight: 800;
-			letter-spacing: 0.01em;
+			letter-spacing: 0.015em;
 			cursor: pointer;
-			backdrop-filter: blur(6px);
-			text-shadow: 0 2px 6px rgba(0, 0, 0, 0.24);
-			box-shadow: 0 10px 28px rgba(5, 14, 24, 0.38);
+			backdrop-filter: blur(10px);
+			text-shadow: 0 3px 8px rgba(0, 0, 0, 0.28);
+			box-shadow:
+				0 18px 38px rgba(4, 10, 20, 0.44),
+				inset 0 1px 0 rgba(255, 255, 255, 0.24);
 			transition: opacity 220ms ease, transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
 			opacity: 0;
 			pointer-events: none;
@@ -148,20 +152,20 @@
 
 		.video-status {
 			position: absolute;
-			top: calc(50% + 2.1rem);
+			top: calc(50% + 2.65rem);
 			left: 50%;
 			transform: translate(-50%, 0);
 			z-index: 2;
-			padding: 0.34rem 0.7rem;
+			padding: 0.28rem 0.64rem;
 			border-radius: 999px;
-			border: 1px solid rgba(204, 231, 255, 0.28);
-			background: rgba(9, 18, 31, 0.34);
-			color: rgba(241, 248, 255, 0.96);
-			font-size: 0.74rem;
-			font-weight: 700;
+			border: 1px solid rgba(204, 231, 255, 0.16);
+			background: rgba(8, 16, 28, 0.2);
+			color: rgba(238, 247, 255, 0.78);
+			font-size: 0.69rem;
+			font-weight: 600;
 			letter-spacing: 0.01em;
-			backdrop-filter: blur(3px);
-			text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+			backdrop-filter: blur(2px);
+			text-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
 			opacity: 0;
 			pointer-events: none;
 			transition: opacity 220ms ease;
@@ -179,22 +183,26 @@
 
 		.sound-toggle::before {
 			content: "▶";
-			font-size: 0.84rem;
+			font-size: 0.92rem;
 			line-height: 1;
-			width: 1.55rem;
-			height: 1.55rem;
+			width: 1.86rem;
+			height: 1.86rem;
 			display: grid;
 			place-items: center;
 			border-radius: 50%;
-			background: rgba(168, 216, 255, 0.28);
-			color: #07315d;
-			box-shadow: 0 0 0 1px rgba(188, 226, 255, 0.4);
+			background: rgba(198, 231, 255, 0.22);
+			color: #0a3f74;
+			box-shadow: 0 0 0 1px rgba(196, 230, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.38);
 		}
 
 		.sound-toggle:hover {
-			transform: translate(-50%, -50%) scale(1.035);
-			background: rgba(12, 23, 38, 0.5);
-			box-shadow: 0 14px 32px rgba(8, 20, 34, 0.45);
+			transform: translate(-50%, -50%) scale(1.045);
+			background:
+				linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.06) 45%, rgba(255, 255, 255, 0.09)),
+				rgba(10, 20, 34, 0.46);
+			box-shadow:
+				0 22px 44px rgba(4, 12, 24, 0.5),
+				inset 0 1px 0 rgba(255, 255, 255, 0.3);
 		}
 
 		.control-text {
@@ -299,9 +307,9 @@
 			}
 
 			.sound-toggle {
-				font-size: 0.88rem;
-				padding: 0.7rem 1rem;
-				min-width: 196px;
+				font-size: 0.98rem;
+				padding: 0.86rem 1.14rem;
+				min-width: 226px;
 			}
 
 			.top-cta {
@@ -324,6 +332,7 @@
 
 		@media (max-width: 768px) {
 			.alt-hero {
+				min-height: 62vh;
 				background: #060b13;
 			}
 
@@ -331,6 +340,83 @@
 			.hero-fallback {
 				object-fit: contain;
 				background: #060b13;
+			}
+
+			.video-status {
+				top: calc(50% + 3.15rem);
+			}
+		}
+
+		.mobile-services {
+			display: none;
+		}
+
+		@media (max-width: 768px) {
+			.mobile-services {
+				display: block;
+				background: #ffffff;
+				color: #0f1728;
+				padding: 1.1rem 1rem 1.4rem;
+			}
+
+			.mobile-services-shell {
+				max-width: 740px;
+				margin: 0 auto;
+			}
+
+			.mobile-services h2 {
+				font-size: clamp(1.3rem, 5.8vw, 1.9rem);
+				line-height: 1.15;
+				letter-spacing: -0.02em;
+				margin-bottom: 0.55rem;
+			}
+
+			.mobile-services p {
+				font-size: 0.94rem;
+				line-height: 1.5;
+				color: #4a5465;
+				margin-bottom: 0.86rem;
+			}
+
+			.mobile-services-grid {
+				display: grid;
+				gap: 0.72rem;
+			}
+
+			.mobile-service-card {
+				background: #f8fbff;
+				border: 1px solid #deebfa;
+				border-radius: 14px;
+				padding: 0.78rem 0.82rem;
+			}
+
+			.mobile-service-card h3 {
+				font-size: 0.98rem;
+				line-height: 1.25;
+				margin-bottom: 0.3rem;
+				color: #0f1d33;
+			}
+
+			.mobile-service-card p {
+				margin: 0;
+				font-size: 0.88rem;
+				line-height: 1.45;
+				color: #51607a;
+			}
+
+			.mobile-services-call {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				margin-top: 0.95rem;
+				padding: 0.72rem 0.98rem;
+				border-radius: 999px;
+				text-decoration: none;
+				font-size: 0.9rem;
+				font-weight: 700;
+				color: #ffffff;
+				background: linear-gradient(120deg, #0a84ff, #65adff);
+				box-shadow: 0 10px 20px rgba(10, 132, 255, 0.24);
 			}
 		}
 	</style>
@@ -363,6 +449,30 @@
 				<span class="hero-marquee-text" aria-hidden="true">Your printer says "offline" but your patience is already there? We got you.</span>
 				<span class="hero-marquee-text" aria-hidden="true">If your computer freezes more than your freezer, it’s time to call us.</span>
 			</div>
+		</div>
+	</section>
+
+	<section class="mobile-services" aria-label="Mobile tech support services">
+		<div class="mobile-services-shell">
+			<h2>Tech help that’s clear, local, and fast.</h2>
+			<p>Bright Tech Support helps you solve everyday tech issues without the stress. Here’s what we can help with:</p>
+			<div class="mobile-services-grid">
+				<article class="mobile-service-card">
+					<h3>Device setup & optimization</h3>
+					<p>Phone, laptop, tablet, printer, and Wi-Fi setup done right the first time.</p>
+				</article>
+				<article class="mobile-service-card">
+					<h3>Troubleshooting & repairs</h3>
+					<p>Fixes for slow computers, login issues, software glitches, and update problems.</p>
+				</article>
+				<article class="mobile-service-card">
+					<h3>Ongoing support</h3>
+					<p>Friendly one-on-one guidance so your tech stays stable and easy to use.</p>
+				</article>
+			</div>
+			<a class="mobile-services-call" href="tel:9562447002" aria-label="Call Bright Tech Support">
+				Call 956.244.7002
+			</a>
 		</div>
 	</section>
 
@@ -401,7 +511,7 @@
 			heroVideo.addEventListener("error", () => {
 				showFallback();
 				showControl();
-				showStatus("Video unavailable. Tap Replay.");
+				showStatus("Video unavailable. Tap Play Video.");
 			});
 
 			heroVideo.addEventListener("timeupdate", () => {
@@ -419,7 +529,7 @@
 			heroVideo.addEventListener("ended", () => {
 				showFallback();
 				showControl();
-				showStatus("Replay available");
+				hideStatus();
 				didEarlyVisualFade = false;
 			});
 
