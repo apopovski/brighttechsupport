@@ -3,448 +3,420 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Bright Tech Support | Alternative Landing</title>
-	<meta name="description" content="Alternative landing page concept for Bright Tech Support." />
-	<style>
-		* { box-sizing: border-box; margin: 0; padding: 0; }
+	<title>Bright Tech Support | Trusted Tech Support in Harlingen, TX</title>
+	<meta
+		name="description"
+		content="Bright Tech Support provides trusted one-on-one tech support in Harlingen, TX. Device setup, troubleshooting, software guidance, and ongoing local support."
+	/>
+	<meta
+		name="keywords"
+		content="Bright Tech Support, tech support Harlingen TX, computer help Harlingen, device setup, software troubleshooting, local tech help"
+	/>
+	<meta name="author" content="Bright Tech Support" />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://www.techsupportrgv.com/" />
 
-		html, body { width: 100%; height: 100%; }
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Bright Tech Support | Friendly Tech Help in Harlingen, TX" />
+	<meta
+		property="og:description"
+		content="Friendly, local tech support in Harlingen, TX. Setup help, troubleshooting, and practical tech guidance from Bright Tech Support."
+	/>
+	<meta property="og:url" content="https://www.techsupportrgv.com/" />
+	<meta property="og:site_name" content="Bright Tech Support" />
 
-		body {
-			font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-			background: #0a0f18;
-			color: #ffffff;
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Bright Tech Support | Friendly Tech Help in Harlingen, TX" />
+	<meta
+		name="twitter:description"
+		content="Local, one-on-one tech support in Harlingen, TX for everyday device and software issues."
+	/>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Material+Symbols+Rounded:FILL@0..1&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="styles.css" />
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Bright Tech Support",
+			"description": "Friendly tech support and everyday technology help in Harlingen, Texas.",
+			"areaServed": "Harlingen, TX",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Harlingen",
+				"addressRegion": "TX",
+				"addressCountry": "US"
+			},
+			"url": "https://www.techsupportrgv.com/",
+			"serviceType": [
+				"Tech support",
+				"Device setup",
+				"Software troubleshooting",
+				"General technology help"
+			]
 		}
-
-		.alt-hero {
-			position: relative;
-			min-height: 100vh;
-			display: block;
-			overflow: hidden;
-		}
-
-		.hero-video,
-		.hero-fallback {
-			position: absolute;
-			inset: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			z-index: 0;
-		}
-
-		.hero-video {
-			opacity: 1;
-			transition: opacity 950ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 1200ms ease;
-			transform: scale(1);
-		}
-
-		.hero-fallback {
-			opacity: 0;
-			transition: opacity 950ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 1200ms ease;
-			transform: scale(1.02);
-		}
-
-		.alt-hero.is-show-fallback .hero-video {
-			opacity: 0;
-			transform: scale(1.01);
-		}
-
-		.alt-hero.is-show-fallback .hero-fallback {
-			opacity: 1;
-			transform: scale(1);
-		}
-
-		.top-brand {
-			position: absolute;
-			top: clamp(1rem, 3vw, 2rem);
-			left: clamp(1rem, 3vw, 2rem);
-			z-index: 2;
-			display: inline-flex;
-			align-items: center;
-			gap: 0.5rem;
-			padding: 0.45rem 0.8rem;
-			border-radius: 999px;
-			font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-			font-weight: 800;
-			letter-spacing: 0.01em;
-			color: #f1f8ff;
-			background: rgba(7, 13, 23, 0.55);
-			border: 1px solid rgba(190, 224, 255, 0.28);
-			text-shadow: 0 5px 14px rgba(0, 0, 0, 0.45);
-			backdrop-filter: blur(6px);
-		}
-
-		.logo-badge {
-			position: relative;
-			width: 14px;
-			height: 14px;
-			border-radius: 50%;
-			background: radial-gradient(circle at 35% 35%, #b8e3ff, #5cb1ff 58%, #0a84ff 100%);
-			box-shadow: 0 0 14px rgba(108, 190, 255, 0.72);
-			animation: logoPulse 2.4s ease-in-out infinite;
-		}
-
-		.logo-badge::before {
-			content: "";
-			position: absolute;
-			inset: -4px;
-			border-radius: 50%;
-			border: 1px solid rgba(170, 220, 255, 0.72);
-			animation: logoRing 3.4s linear infinite;
-		}
-
-		.logo-text {
-			line-height: 1;
-		}
-
-		.top-cta {
-			position: absolute;
-			top: clamp(1rem, 3vw, 2rem);
-			right: clamp(1rem, 3vw, 2rem);
-			z-index: 2;
-			display: inline-grid;
-			gap: 0.08rem;
-			padding: 0.5rem 0.88rem 0.56rem;
-			border-radius: 14px;
-			letter-spacing: 0.01em;
-			color: #f4faff;
-			text-decoration: none;
-			background: rgba(9, 17, 29, 0.58);
-			border: 1px solid rgba(190, 224, 255, 0.32);
-			text-shadow: 0 5px 14px rgba(0, 0, 0, 0.45);
-			backdrop-filter: blur(6px);
-			transition: transform 180ms ease, background-color 180ms ease;
-			animation: ctaFloat 2.8s ease-in-out infinite;
-		}
-
-		.sound-toggle {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) scale(0.96);
-			z-index: 2;
-			display: inline-flex;
-			align-items: center;
-			gap: 0.42rem;
-			padding: 0.52rem 0.9rem;
-			border-radius: 999px;
-			border: 1px solid rgba(204, 231, 255, 0.34);
-			background: rgba(11, 21, 34, 0.24);
-			color: #f3faff;
-			font-size: 0.86rem;
-			font-weight: 800;
-			letter-spacing: 0.01em;
-			cursor: pointer;
-			backdrop-filter: blur(3px);
-			text-shadow: 0 2px 6px rgba(0, 0, 0, 0.24);
-			box-shadow: 0 6px 18px rgba(5, 14, 24, 0.24);
-			transition: opacity 220ms ease, transform 220ms ease, box-shadow 220ms ease, background 220ms ease;
-			opacity: 0;
-			pointer-events: none;
-		}
-
-		.alt-hero.is-control-visible .sound-toggle {
-			opacity: 1;
-			pointer-events: auto;
-			transform: translate(-50%, -50%) scale(1);
-		}
-
-		.sound-toggle::before {
-			content: "▶";
-			font-size: 0.72rem;
-			line-height: 1;
-			width: 1.2rem;
-			height: 1.2rem;
-			display: grid;
-			place-items: center;
-			border-radius: 50%;
-			background: rgba(168, 216, 255, 0.28);
-			color: #07315d;
-			box-shadow: 0 0 0 1px rgba(188, 226, 255, 0.4);
-		}
-
-		.sound-toggle:hover {
-			transform: translate(-50%, -50%) scale(1.02);
-			background: rgba(12, 23, 38, 0.34);
-			box-shadow: 0 10px 22px rgba(8, 20, 34, 0.32);
-		}
-
-		.sound-toggle.is-enabled {
-			background: rgba(12, 24, 40, 0.3);
-			border-color: rgba(191, 230, 255, 0.46);
-		}
-
-		.control-text {
-			font-weight: 700;
-		}
-
-		.control-sound {
-			padding: 0.15rem 0.45rem;
-			border-radius: 999px;
-			font-size: 0.72rem;
-			font-weight: 700;
-			background: rgba(191, 226, 255, 0.12);
-			border: 1px solid rgba(188, 224, 255, 0.26);
-		}
-
-		.top-cta-small {
-			font-size: clamp(0.74rem, 0.95vw, 0.82rem);
-			font-weight: 600;
-			opacity: 0.9;
-			line-height: 1.1;
-		}
-
-		.top-cta-big {
-			font-size: clamp(1rem, 1.55vw, 1.2rem);
-			font-weight: 800;
-			line-height: 1.15;
-		}
-
-		.top-cta:hover {
-			transform: translateY(-1px);
-			background: rgba(12, 24, 40, 0.72);
-			animation-play-state: paused;
-		}
-
-		@keyframes ctaFloat {
-			0%, 100% {
-				transform: translateY(0);
-				box-shadow: 0 0 0 rgba(113, 193, 255, 0);
-			}
-			50% {
-				transform: translateY(-3px);
-				box-shadow: 0 8px 20px rgba(113, 193, 255, 0.2);
-			}
-		}
-
-		@keyframes logoPulse {
-			0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(108, 190, 255, 0.55); }
-			50% { transform: scale(1.08); box-shadow: 0 0 18px rgba(108, 190, 255, 0.9); }
-		}
-
-		@keyframes logoRing {
-			0% { transform: rotate(0deg) scale(1); opacity: 0.82; }
-			100% { transform: rotate(360deg) scale(1.05); opacity: 0.55; }
-		}
-
-		.alt-hero::after {
-			content: "";
-			position: absolute;
-			inset: 0;
-			background: linear-gradient(180deg, rgba(2, 5, 10, 0.08) 40%, rgba(2, 5, 10, 0.78) 100%);
-			z-index: 1;
-		}
-
-		.hero-marquee {
-			position: relative;
-			z-index: 2;
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			padding: 0.95rem 0;
-			overflow: hidden;
-			background: linear-gradient(180deg, rgba(6, 11, 18, 0.14), rgba(6, 11, 18, 0.24));
-			border-top: 1px solid rgba(199, 227, 255, 0.14);
-			backdrop-filter: blur(2px);
-		}
-
-
-		.hero-marquee-track {
-			display: inline-flex;
-			align-items: center;
-			gap: 3rem;
-			white-space: nowrap;
-			padding-left: 100%;
-			animation: marquee 34s linear infinite;
-		}
-
-		.hero-marquee:hover .hero-marquee-track,
-		.hero-marquee:focus-within .hero-marquee-track {
-			animation-play-state: paused;
-		}
-
-		.hero-marquee-text {
-			display: inline-block;
-			font-size: clamp(1.05rem, 2.3vw, 1.5rem);
-			font-weight: 700;
-			letter-spacing: 0.01em;
-			color: #f1f8ff;
-			text-shadow: 0 5px 16px rgba(0, 0, 0, 0.5);
-		}
-
-		@keyframes marquee {
-			0% { transform: translateX(0); }
-			100% { transform: translateX(-100%); }
-		}
-
-		@media (max-width: 680px) {
-			.top-brand,
-			.top-cta {
-				top: 0.75rem;
-			}
-
-			.sound-toggle {
-				font-size: 0.74rem;
-				padding: 0.42rem 0.72rem;
-			}
-
-			.top-cta {
-				padding: 0.42rem 0.74rem 0.48rem;
-			}
-
-			.top-cta-small {
-				font-size: 0.68rem;
-			}
-
-			.top-cta-big {
-				font-size: 0.95rem;
-			}
-
-			.hero-marquee {
-				padding: 0.82rem 0;
-				bottom: 0;
-			}
-		}
-	</style>
+	</script>
 </head>
 <body>
-	<section class="alt-hero" aria-label="Alternative hero section">
-		<video class="hero-video" autoplay muted playsinline preload="auto" poster="images/hero-2.jpeg" aria-hidden="true">
-			<source src="images/hero_video_mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
-			<source src="images/hero_video.mp4" type="video/mp4" />
-		</video>
-		<img class="hero-fallback" src="images/hero-2.jpeg" alt="Tech support hero" loading="eager" />
-
-		<div class="top-brand"><span class="logo-badge" aria-hidden="true"></span><span class="logo-text">Bright Tech Support</span></div>
-		<a class="top-cta" href="tel:9562447002" aria-label="Call Bright Tech Support at 956.244.7002">
-			<span class="top-cta-small">Tech acting up? Call:</span>
-			<span class="top-cta-big">956.244.7002</span>
-		</a>
-		<button class="sound-toggle" type="button" aria-label="Replay hero video with sound">
-			<span class="control-text">Replay</span>
-			<span class="control-sound">Sound On</span>
-		</button>
-		<div class="hero-marquee" aria-label="Moving message">
-			<div class="hero-marquee-track">
-				<span class="hero-marquee-text">Have you tried turning it off and on again? We actually help past that step.</span>
-				<span class="hero-marquee-text">Wi-Fi acting shy again? We speak fluent router.</span>
-				<span class="hero-marquee-text">Your printer says "offline" but your patience is already there? We got you.</span>
-				<span class="hero-marquee-text">If your computer freezes more than your freezer, it’s time to call us.</span>
-				<span class="hero-marquee-text" aria-hidden="true">Have you tried turning it off and on again? We actually help past that step.</span>
-				<span class="hero-marquee-text" aria-hidden="true">Wi-Fi acting shy again? We speak fluent router.</span>
-				<span class="hero-marquee-text" aria-hidden="true">Your printer says "offline" but your patience is already there? We got you.</span>
-				<span class="hero-marquee-text" aria-hidden="true">If your computer freezes more than your freezer, it’s time to call us.</span>
-			</div>
+	<header>
+		<div class="container nav">
+			<a class="brand" href="#top" aria-label="Bright Tech Support home">
+				<svg class="brand-mark" viewBox="0 0 32 32" role="img" aria-hidden="true">
+					<path class="outline" d="M16 2.7 23 5.9 25.6 12.6 23.4 18.3 19.3 22.2H12.7L8.6 18.3 6.4 12.6 9 5.9Z" />
+					<circle class="ring" cx="16" cy="12.1" r="5.05" />
+					<path class="circuit" d="M10.3 15.1h2.8M18.9 15.1h2.8M16 9.9v2.5M16 18.1v2.5" />
+					<circle class="node" cx="9.2" cy="15.1" r="1" />
+					<circle class="node" cx="22.8" cy="15.1" r="1" />
+					<circle class="node" cx="16" cy="9" r="0.95" />
+					<path class="accent" d="M16.9 8.9 13.3 14h2.3l-0.7 4 3.8-5.4h-2.4Z" />
+					<path class="glow" d="M16 5.4v1.4M12.4 7.1l1 1M19.6 7.1l-1 1" />
+					<path class="base" d="M12.5 25.1h7M13.2 27.2h5.6" />
+				</svg>
+				Bright <span>Tech Support</span>
+			</a>
+			<a class="cta-link" href="#contact"><span class="material-symbols-rounded" aria-hidden="true">support_agent</span>Get Help</a>
 		</div>
-	</section>
+	</header>
+
+	<main id="top">
+		<section class="hero-story">
+			<div class="hero-story-media" aria-hidden="true"></div>
+			<div class="hero-story-gradient" aria-hidden="true"></div>
+			<div class="container hero-story-content">
+				<p class="eyebrow">Harlingen, Texas · Bright Tech Support</p>
+				<h1>Trusted tech support told as a smooth customer journey.</h1>
+				<p class="lead">
+					From confusing device issues to calm confidence, every section below shows what your support experience
+					actually feels like.
+				</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="#journey">Start the Story</a>
+					<a class="btn btn-secondary" href="#contact">Contact Bright Tech Support</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="chapter-intro reveal" id="journey">
+			<div class="container chapter-intro-grid">
+				<div>
+					<p class="eyebrow">Chapter 1 · The Problem</p>
+					<h2 class="section-title">Most tech help feels fragmented. Yours won’t.</h2>
+					<p class="section-copy">
+						No handoffs. No scripts. No talking in circles. Just one person helping you move from frustrated to fully operational.
+					</p>
+				</div>
+				<div class="chapter-metrics">
+					<article><strong>&lt;24h</strong><span>Typical reply time</span></article>
+					<article><strong>1:1</strong><span>Direct support path</span></article>
+					<article><strong>Local</strong><span>Harlingen-based service</span></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="story-engine reveal" id="story-engine">
+			<div class="story-engine-sticky" aria-live="polite">
+				<div class="story-engine-media-wrap">
+					<img
+						class="story-engine-media"
+						src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2200&q=80"
+						alt="Minimal workspace with clean monitor and keyboard"
+						loading="lazy"
+					/>
+				</div>
+				<div class="story-engine-overlay">
+					<p class="story-engine-kicker">Chapter 2</p>
+					<h2 class="story-engine-title">We simplify your setup before anything breaks.</h2>
+					<p class="story-engine-copy">Clean configurations, clearer workflows, and fewer surprises in your day-to-day work.</p>
+					<div class="story-engine-progress" aria-hidden="true"><span class="story-engine-progress-fill"></span></div>
+					<div class="story-engine-dots" role="tablist" aria-label="Support story chapters">
+						<button class="story-engine-dot is-active" type="button" role="tab" aria-label="Chapter 2" aria-selected="true"></button>
+						<button class="story-engine-dot" type="button" role="tab" aria-label="Chapter 3" aria-selected="false"></button>
+						<button class="story-engine-dot" type="button" role="tab" aria-label="Chapter 4" aria-selected="false"></button>
+						<button class="story-engine-dot" type="button" role="tab" aria-label="Chapter 5" aria-selected="false"></button>
+					</div>
+				</div>
+			</div>
+
+			<div class="story-engine-steps" aria-label="Customer support journey">
+				<article
+					class="story-engine-step is-active"
+					data-story-image="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=2200&q=80"
+					data-story-kicker="Chapter 2"
+					data-story-title="We simplify your setup before anything breaks."
+					data-story-copy="Clean configurations, clearer workflows, and fewer surprises in your day-to-day work."
+				>
+					<h3>Preparation first, stress second.</h3>
+				</article>
+				<article
+					class="story-engine-step"
+					data-story-image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2200&q=80"
+					data-story-kicker="Chapter 3"
+					data-story-title="When problems appear, we troubleshoot with precision."
+					data-story-copy="No guesswork loops. We isolate root causes and fix the issues that matter most first."
+				>
+					<h3>Targeted troubleshooting that saves your time.</h3>
+				</article>
+				<article
+					class="story-engine-step"
+					data-story-image="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=2200&q=80"
+					data-story-kicker="Chapter 4"
+					data-story-title="We restore flow across apps, accounts, and devices."
+					data-story-copy="Everything works together again—logins, software, updates, and your daily tasks."
+				>
+					<h3>Your ecosystem, back in sync.</h3>
+				</article>
+				<article
+					class="story-engine-step"
+					data-story-image="https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?auto=format&fit=crop&w=2200&q=80"
+					data-story-kicker="Chapter 5"
+					data-story-title="Then we lock in speed, safety, and confidence."
+					data-story-copy="You leave with a cleaner system, safer defaults, and support you can call on anytime."
+				>
+					<h3>Long-term confidence—not temporary patches.</h3>
+				</article>
+			</div>
+		</section>
+
+		<section class="proof reveal">
+			<div class="container proof-grid">
+				<article class="proof-card">
+					<p class="proof-label">Consistency</p>
+					<h3>Same expert every time.</h3>
+					<p>You won’t repeat your story to five different people.</p>
+				</article>
+				<article class="proof-card">
+					<p class="proof-label">Clarity</p>
+					<h3>Plain language, practical steps.</h3>
+					<p>You’ll understand what changed and why it works.</p>
+				</article>
+				<article class="proof-card">
+					<p class="proof-label">Momentum</p>
+					<h3>Fast, local support in Harlingen.</h3>
+					<p>Quick response and a clear path to resolution.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="service-scenes reveal" id="services">
+			<div class="container">
+				<h2 class="section-title">What your story looks like in real life.</h2>
+				<p class="section-copy">Each service is a chapter designed to move you forward with less effort and more certainty.</p>
+
+				<article class="scene-card">
+					<div class="scene-media parallax-frame">
+						<img class="parallax-media" data-depth="1" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1800&q=80" alt="Minimal collaborative workspace with laptops" loading="lazy" />
+					</div>
+					<div class="scene-copy">
+						<p class="eyebrow">Setup Chapter</p>
+						<h3>Device setup that feels instant and intentional.</h3>
+						<p>From laptops and phones to Wi-Fi and printers, we create clean setups that simply work.</p>
+					</div>
+				</article>
+
+				<article class="scene-card reverse">
+					<div class="scene-media parallax-frame">
+						<img class="parallax-media" data-depth="1.2" src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1800&q=80" alt="Close-up of clean computer workstation and code screen" loading="lazy" />
+					</div>
+					<div class="scene-copy">
+						<p class="eyebrow">Repair Chapter</p>
+						<h3>Troubleshooting that removes friction quickly.</h3>
+						<p>We diagnose bottlenecks, account issues, and update failures with methodical, high-confidence fixes.</p>
+					</div>
+				</article>
+
+				<article class="scene-card">
+					<div class="scene-media parallax-frame">
+						<img class="parallax-media" data-depth="0.9" src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80" alt="Clean modern desk with tablet and notebook" loading="lazy" />
+					</div>
+					<div class="scene-copy">
+						<p class="eyebrow">Confidence Chapter</p>
+						<h3>Ongoing guidance so your tech stays stable.</h3>
+						<p>Proactive optimization, safer defaults, and reliable follow-up support keep everything running smoothly.</p>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="contact" class="finale reveal">
+			<div class="container finale-shell">
+				<p class="eyebrow">Final Chapter</p>
+				<h2 class="section-title">Ready to turn tech stress into momentum?</h2>
+				<p class="section-copy">
+					Send your tech issue details and Bright Tech Support will guide you from stuck to solved—with clarity at every step.
+				</p>
+				<div class="hero-actions">
+					<a class="btn btn-primary" href="#top">Start Your Support Request</a>
+					<a class="btn btn-secondary" href="#services">Review Services</a>
+				</div>
+				<p class="finale-meta">Bright Tech Support · Harlingen, TX</p>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="container">
+			© <span id="year"></span> Bright Tech Support • Tech Support in Harlingen, TX
+		</div>
+	</footer>
 
 	<script>
-		const VIDEO_SEEN_KEY = "btsHeroVideoSeen";
-		const altHero = document.querySelector(".alt-hero");
-		const heroVideo = document.querySelector(".hero-video");
-		const soundToggle = document.querySelector(".sound-toggle");
-		const soundPill = document.querySelector(".control-sound");
+		document.getElementById("year").textContent = new Date().getFullYear();
+		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-		if (altHero && heroVideo) {
-			const showFallback = () => altHero.classList.add("is-show-fallback");
-			const hideFallback = () => altHero.classList.remove("is-show-fallback");
-			const showControl = () => altHero.classList.add("is-control-visible");
-			const hideControl = () => altHero.classList.remove("is-control-visible");
-			const videoFadeLeadSeconds = 1.6;
-			let didEarlyVisualFade = false;
-			const hasSeenVideo = (() => {
-				try {
-					return window.localStorage.getItem(VIDEO_SEEN_KEY) === "1";
-				} catch (_error) {
-					return false;
-				}
-			})();
+		const revealItems = document.querySelectorAll(".reveal");
+		if ("IntersectionObserver" in window && revealItems.length) {
+			const revealObserver = new IntersectionObserver((entries, observer) => {
+				entries.forEach((entry) => {
+					if (!entry.isIntersecting) return;
+					entry.target.classList.add("is-visible");
+					observer.unobserve(entry.target);
+				});
+			}, { threshold: 0.16, rootMargin: "0px 0px -6% 0px" });
 
-			const markSeenVideo = () => {
-				try {
-					window.localStorage.setItem(VIDEO_SEEN_KEY, "1");
-				} catch (_error) {
-					/* no-op */
+			revealItems.forEach((item) => revealObserver.observe(item));
+		} else {
+			revealItems.forEach((item) => item.classList.add("is-visible"));
+		}
+
+		const storyRoot = document.querySelector(".story-engine");
+		if (storyRoot) {
+			const storyFallbackImage = "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2200&q=80";
+			const sticky = storyRoot.querySelector(".story-engine-sticky");
+			const media = storyRoot.querySelector(".story-engine-media");
+			const kicker = storyRoot.querySelector(".story-engine-kicker");
+			const title = storyRoot.querySelector(".story-engine-title");
+			const copy = storyRoot.querySelector(".story-engine-copy");
+			const progressFill = storyRoot.querySelector(".story-engine-progress-fill");
+			const steps = Array.from(storyRoot.querySelectorAll(".story-engine-step"));
+			const dots = Array.from(storyRoot.querySelectorAll(".story-engine-dot"));
+			let swapTimeout;
+
+			const setActiveStep = (step, index) => {
+				if (!step || !sticky || !media || !kicker || !title || !copy) return;
+
+				steps.forEach((item) => item.classList.toggle("is-active", item === step));
+				dots.forEach((dot, dotIndex) => {
+					const active = dotIndex === index;
+					dot.classList.toggle("is-active", active);
+					dot.setAttribute("aria-selected", active ? "true" : "false");
+				});
+
+				if (progressFill) {
+					const progress = ((index + 1) / Math.max(1, steps.length)) * 100;
+					progressFill.style.width = `${progress.toFixed(2)}%`;
 				}
+
+				const nextSrc = step.dataset.storyImage || storyFallbackImage;
+				const nextKicker = step.dataset.storyKicker;
+				const nextTitle = step.dataset.storyTitle;
+				const nextCopy = step.dataset.storyCopy;
+
+				if (!nextSrc || media.getAttribute("src") === nextSrc) {
+					kicker.textContent = nextKicker || kicker.textContent;
+					title.textContent = nextTitle || title.textContent;
+					copy.textContent = nextCopy || copy.textContent;
+					return;
+				}
+
+				window.clearTimeout(swapTimeout);
+				sticky.classList.add("is-swapping");
+
+				swapTimeout = window.setTimeout(() => {
+					media.setAttribute("src", nextSrc);
+					media.setAttribute("alt", nextTitle || "Support story chapter visual");
+					kicker.textContent = nextKicker || kicker.textContent;
+					title.textContent = nextTitle || title.textContent;
+					copy.textContent = nextCopy || copy.textContent;
+					sticky.classList.remove("is-swapping");
+				}, 180);
 			};
 
-			const setSoundState = (isOn) => {
-				if (!soundPill || !soundToggle) return;
-				soundPill.textContent = isOn ? "Sound On" : "Sound Off";
-				soundToggle.classList.toggle("is-enabled", isOn);
-			};
-
-			heroVideo.addEventListener("error", showFallback);
-			heroVideo.addEventListener("error", showControl);
-			heroVideo.addEventListener("timeupdate", () => {
-				if (didEarlyVisualFade) return;
-				if (!Number.isFinite(heroVideo.duration) || heroVideo.duration <= 0) return;
-
-				const remaining = heroVideo.duration - heroVideo.currentTime;
-				if (remaining <= videoFadeLeadSeconds && remaining > 0) {
-					// Visual-only crossfade; do not mute/pause audio here.
-					showFallback();
-					didEarlyVisualFade = true;
-				}
-			});
-
-			heroVideo.addEventListener("ended", () => {
-				markSeenVideo();
-				showFallback();
-				showControl();
-				didEarlyVisualFade = false;
-			});
-
-			const startVideo = async () => {
-				try {
-					didEarlyVisualFade = false;
-					heroVideo.muted = false;
-					heroVideo.volume = 1;
-					hideFallback();
-					hideControl();
-					await heroVideo.play();
-					setSoundState(true);
-				} catch (_error) {
-					heroVideo.muted = true;
-					try {
-						hideFallback();
-						hideControl();
-						await heroVideo.play();
-					} catch (_silentError) {
-						showFallback();
-						showControl();
-					}
-					setSoundState(false);
-				}
-			};
-
-			if (hasSeenVideo) {
-				showFallback();
-				showControl();
-				setSoundState(true);
-			} else {
-				startVideo();
-			}
-
-			if (soundToggle) {
-				soundToggle.addEventListener("click", async () => {
-					try {
-						didEarlyVisualFade = false;
-						hideFallback();
-						hideControl();
-						heroVideo.currentTime = 0;
-						heroVideo.muted = false;
-						heroVideo.volume = 1;
-						await heroVideo.play();
-						setSoundState(true);
-					} catch (_error) {
-						setSoundState(false);
-						showControl();
-					}
+			if (media) {
+				media.addEventListener("error", () => {
+					if (media.getAttribute("src") === storyFallbackImage) return;
+					media.setAttribute("src", storyFallbackImage);
 				});
 			}
+
+			steps.forEach((step) => {
+				const src = step.dataset.storyImage;
+				if (!src) return;
+				const preload = new Image();
+				preload.src = src;
+			});
+
+			setActiveStep(steps[0], 0);
+
+			dots.forEach((dot, index) => {
+				dot.addEventListener("click", () => {
+					const target = steps[index];
+					if (!target) return;
+					target.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "center" });
+					setActiveStep(target, index);
+				});
+			});
+
+			if ("IntersectionObserver" in window) {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (!entry.isIntersecting) return;
+						const index = steps.indexOf(entry.target);
+						if (index < 0) return;
+						setActiveStep(entry.target, index);
+					});
+				}, {
+					threshold: 0.62,
+					rootMargin: "-20% 0px -34% 0px"
+				});
+
+				steps.forEach((step) => observer.observe(step));
+			}
+		}
+
+		const heroStory = document.querySelector(".hero-story");
+		const parallaxMedia = Array.from(document.querySelectorAll(".parallax-media"));
+		if (!prefersReducedMotion && (heroStory || parallaxMedia.length)) {
+			let rafId = null;
+
+			const renderMotion = () => {
+				rafId = null;
+				const viewportH = window.innerHeight || 1;
+
+				if (heroStory) {
+					const rect = heroStory.getBoundingClientRect();
+					const progress = Math.max(0, Math.min(1, (viewportH - rect.top) / (viewportH + rect.height)));
+					heroStory.style.setProperty("--hero-progress", progress.toFixed(3));
+				}
+
+				parallaxMedia.forEach((img) => {
+					const frame = img.closest(".parallax-frame");
+					if (!frame) return;
+
+					const rect = frame.getBoundingClientRect();
+					const progress = (viewportH - rect.top) / (viewportH + rect.height);
+					const center = Math.max(-0.5, Math.min(0.5, progress - 0.5));
+					const depth = Number(img.dataset.depth || "1");
+					const y = center * 58 * depth;
+					const scale = 1.06 - Math.abs(center) * 0.08;
+
+					img.style.setProperty("--parallax-y", `${y.toFixed(2)}px`);
+					img.style.setProperty("--parallax-scale", scale.toFixed(3));
+				});
+			};
+
+			const queueRender = () => {
+				if (rafId !== null) return;
+				rafId = window.requestAnimationFrame(renderMotion);
+			};
+
+			renderMotion();
+			window.addEventListener("scroll", queueRender, { passive: true });
+			window.addEventListener("resize", queueRender);
 		}
 	</script>
 </body>
