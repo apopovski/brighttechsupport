@@ -305,7 +305,7 @@
 			}
 
 			.hero-marquee {
-				padding: 0.82rem 0;
+				padding: 0.52rem 0;
 				bottom: 0;
 			}
 		}
@@ -322,9 +322,10 @@
 				top: 0;
 				left: 0;
 				right: 0;
-				bottom: 58px;
-				height: calc(100% - 58px);
+				bottom: 46px;
+				height: calc(100% - 46px);
 				object-fit: contain;
+				object-position: center top;
 				background: #ffffff;
 			}
 
@@ -332,11 +333,17 @@
 				top: 0;
 				left: 0;
 				right: 0;
-				bottom: 58px;
-				height: calc(100% - 58px);
+				bottom: 46px;
+				height: calc(100% - 46px);
 				object-fit: contain;
-				object-position: center;
+				object-position: center top;
 				background: #ffffff;
+				transform: scale(1.05);
+				transform-origin: top center;
+			}
+
+			.alt-hero.is-show-fallback .hero-fallback {
+				transform: scale(1.05);
 			}
 
 			.sound-toggle {
