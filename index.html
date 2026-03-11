@@ -356,7 +356,7 @@
 			let didEarlyVisualFade = false;
 			const hasSeenVideo = (() => {
 				try {
-					return window.localStorage.getItem(VIDEO_SEEN_KEY) === "1";
+					return window.sessionStorage.getItem(VIDEO_SEEN_KEY) === "1";
 				} catch (_error) {
 					return false;
 				}
@@ -364,7 +364,7 @@
 
 			const markSeenVideo = () => {
 				try {
-					window.localStorage.setItem(VIDEO_SEEN_KEY, "1");
+					window.sessionStorage.setItem(VIDEO_SEEN_KEY, "1");
 				} catch (_error) {
 					/* no-op */
 				}
